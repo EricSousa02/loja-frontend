@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Libre_Franklin, Italiana } from 'next/font/google'
 
-const italiana = Italiana({
+const LibreFranklin = Libre_Franklin({
   subsets: ['latin'],
   variable: "--font-mont",
   weight: "400"
 })
-
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "loja",
@@ -24,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={LibreFranklin.className}>{children}</body>
     </html>
   );
 }
