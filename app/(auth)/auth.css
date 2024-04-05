@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .auth{
+      @apply font-libreFranklin w-full h-screen bg-main-2 flex flex-col items-center justify-center;
+    }
+}
