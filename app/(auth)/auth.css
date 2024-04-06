@@ -3,7 +3,81 @@
 @tailwind utilities;
 
 @layer base {
-    .auth{
-      @apply font-libreFranklin w-full h-screen bg-main-2 flex flex-col items-center justify-center;
+  .auth {
+    @apply font-libreFranklin w-full h-screen bg-main-2;
+  }
+}
+
+/* Css */
+
+.signIn {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .signIn_form {
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+
+    h2 {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      color: var(--Brown);
+      font-size: 30px;
     }
+
+    .input_container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      label {
+        color: var(--Light-brown);
+      }
+
+      input {
+        width: 100%;
+        border-bottom: 1px solid var(--Border-color);
+        padding: 0 3rem 3px 5px;
+      }
+
+      img {
+        position: absolute;
+        right: 0;
+        top: 40%;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 10px 3rem;
+      border: 1px solid var(--Brown);
+      color: var(--Brown);
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: 1s;
+      position: relative;
+      overflow: hidden;
+      z-index: 100;
+
+      &:hover {
+        background-color: var(--Brown);
+        color: var(--White); 
+      }
+
+    }
+
+    a {
+      color: var(--Light-brown);
+    }
+  }
 }

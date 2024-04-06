@@ -3,7 +3,14 @@
   @tailwind utilities;
 
 
-  *{
+  :root {
+    --Brown: #724B45;
+    --Border-color: #2B0000;
+    --Light-brown: #AE9191;
+    --White:#FFFFFF;
+  }
+
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -73,3 +80,19 @@
     }
   }
 
+  /* css */
+
+  input {
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+  button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+  }
