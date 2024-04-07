@@ -12,72 +12,46 @@
 
 .signIn {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+}
 
-  .signIn_form {
-    height: 400px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    position: relative;
+.signIn_form {
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
 
-    h2 {
-      position: absolute;
-      top: 0%;
-      right: 0%;
-      color: var(--Brown);
-      font-size: 30px;
-    }
+.signIn_form h2 {
+  font-size: 30px;
+  @apply text-main-3
+}
 
-    .input_container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
 
-      label {
-        color: var(--Light-brown);
-      }
+.signIn_form button {
+  margin-top: 1rem;
+  padding: 10px 3rem;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  @apply text-main-3 border-solid border-[1px] border-main-3
+}
 
-      input {
-        width: 100%;
-        border-bottom: 1px solid var(--Border-color);
-        padding: 0 3rem 3px 5px;
-      }
+.signIn_form button:hover {
+  @apply bg-main-3 text-main-2
+}
 
-      img {
-        position: absolute;
-        right: 0;
-        top: 40%;
-      }
-    }
-
-    button {
-      margin-top: 1rem;
-      padding: 10px 3rem;
-      border: 1px solid var(--Brown);
-      color: var(--Brown);
-      text-transform: uppercase;
-      font-size: 14px;
-      transition: 1s;
-      position: relative;
-      overflow: hidden;
-      z-index: 100;
-
-      &:hover {
-        background-color: var(--Brown);
-        color: var(--White); 
-      }
-
-    }
-
-    a {
-      color: var(--Light-brown);
-    }
-  }
+.signIn_form a {
+  @apply text-main-4
 }

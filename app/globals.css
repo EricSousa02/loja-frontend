@@ -16,6 +16,8 @@
     box-sizing: border-box;
   }
 
+  
+
   @layer base {
     :root {
       --background: 0 0% 100%;
@@ -96,3 +98,69 @@
   a{
     text-decoration: none;
   }
+
+
+
+/* Inputs */
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .input-container {
+    position: relative;
+    margin: 5px auto;
+    width: 100%;
+    @apply my-3
+  }
+  
+  .input-container input { 
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+   
+  }
+  
+  .input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    @apply text-main-4
+  }
+  
+  .input-container input:focus ~ .label,
+  .input-container input:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    @apply text-main-4
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+    @apply bg-main-3
+  }
+  
+  .input-container input:focus ~ .underline,
+  .input-container input:valid ~ .underline {
+    transform: scaleX(1);
+  }
+
+  /* Inputs */
+
+
+
+  
