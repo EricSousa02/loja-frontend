@@ -3,7 +3,55 @@
 @tailwind utilities;
 
 @layer base {
-    .auth{
-      @apply font-libreFranklin w-full h-screen bg-main-2 flex flex-col items-center justify-center;
-    }
+  .auth {
+    @apply font-libreFranklin w-full h-screen bg-main-2;
+  }
+}
+
+/* Css */
+
+.signIn {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.signIn_form {
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.signIn_form h2 {
+  font-size: 30px;
+  @apply text-main-3
+}
+
+
+.signIn_form button {
+  margin-top: 1rem;
+  padding: 10px 3rem;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  @apply text-main-3 border-solid border-[1px] border-main-3
+}
+
+.signIn_form button:hover {
+  @apply bg-main-3 text-main-2
+}
+
+.signIn_form a {
+  @apply text-main-4
 }
