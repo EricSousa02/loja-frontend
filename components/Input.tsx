@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({ type = "password", label = "Label", class
                 width={15}
                 height={15}
                 alt="icon"
-                className={`z-10 absolute top-1/2 right-4 transform -translate-y-1/2 ${type === "password" ? "cursor-pointer" : ""}`}
+                className={`input-image ${type === "password" ? "cursor-pointer" : ""}`}
                 onClick={togglePasswordVisibility}
             />
 
