@@ -1,6 +1,8 @@
 'use client'
 import Input from '@/components/Input';
+import Image from 'next/image'
 import { emailIcon } from "@/constants";
+import { images } from "@/constants/signImages";
 import React from 'react';
 import { SignupValidation } from '@/lib/validation'
 import { useToast } from '@/components/ui/use-toast';
@@ -42,6 +44,19 @@ const signIn = () => {
 
   return (
     <div className="signIn">
+      <div className="signIn_images">
+        {images.map((image, i) => (
+          <div className="signIn_image" key={i}>
+            <Image
+              src={image.url}
+              width={500}
+              height={500}
+              alt={image.alt}
+            />
+          </div>
+        ))}
+      </div>
+
       <form className="signIn_form" onSubmit={handleSubmit}>
         <h2>Welcome</h2>
 

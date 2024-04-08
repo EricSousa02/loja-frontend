@@ -116,11 +116,8 @@
   
   .input-container input { 
     width: 100%;
-    border: none;
     border-bottom: 2px solid #ccc;
-    padding: 5px 0;
-    background-color: transparent;
-    outline: none;
+    padding: 5px 2.4rem 5px 0;
    
   }
   
