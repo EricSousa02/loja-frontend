@@ -44,6 +44,12 @@ const signIn = () => {
 
   return (
     <div className="signIn">
+        <div className="sign_titles">
+        <h1>Moda</h1>
+        <h1>Express</h1>
+       </div>
+
+
       <div className="signIn_images">
         {images.map((image, i) => (
           <div className="signIn_image" key={i}>
