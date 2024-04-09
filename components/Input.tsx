@@ -11,7 +11,7 @@ interface InputProps {
     name?: string;
 }
 
-const Input: React.FC<InputProps> = ({ type = "password", label = "Label", className, icon = eyeIcon, name }) => {
+const Input: React.FC<InputProps> = ({ type = "password", label = "Label", className, icon, name }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -25,14 +25,17 @@ const Input: React.FC<InputProps> = ({ type = "password", label = "Label", class
             <label htmlFor="input" className="label">
                 {label}
             </label>
-            <Image
-                src={icon}
-                width={15}
-                height={15}
-                alt="icon"
-                className={`input-image ${type === "password" ? "cursor-pointer" : ""}`}
-                onClick={togglePasswordVisibility}
-            />
+            {icon ?
+                <Image
+                    src={icon}
+                    width={15}
+                    height={15}
+                    alt="icon"
+                    className={`input-image ${type === "password" ? "cursor-pointer" : ""}`}
+                    onClick={togglePasswordVisibility}
+                /> : null
+            }
+
 
             <div className="underline"></div>
         </div>

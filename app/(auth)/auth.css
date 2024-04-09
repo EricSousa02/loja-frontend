@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 10rem;
   overflow: hidden;
 
   .sign_titles {

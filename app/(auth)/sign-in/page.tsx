@@ -1,7 +1,7 @@
 'use client'
 import Input from '@/components/Input';
 import Image from 'next/image'
-import { emailIcon } from "@/constants";
+import { emailIcon, eyeIcon } from "@/constants";
 import { images } from "@/constants/signImages";
 import React from 'react';
 import { SignupValidation } from '@/lib/validation'
@@ -68,7 +68,7 @@ const signIn = () => {
 
         <Input label='email' type='text' icon={emailIcon} name="email" />
 
-        <Input label='password' type='password' name="password" />
+        <Input label='password' type='password' icon={eyeIcon} name="password" />
 
         <button type="submit">
           sign in
