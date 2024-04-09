@@ -2,14 +2,6 @@
   @tailwind components;
   @tailwind utilities;
 
-
-  :root {
-    --Brown: #724B45;
-    --Border-color: #2B0000;
-    --Light-brown: #AE9191;
-    --White:#FFFFFF;
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -83,7 +75,7 @@
   }
 
   /* css */
-
+    
   input {
     outline: none;
     border: none;
@@ -108,6 +100,10 @@
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
       transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .input-image{
+    @apply z-10 absolute top-1/2 right-4 transform -translate-y-1/2
   }
 
   .input-container {
