@@ -6,6 +6,7 @@ import { images } from "@/constants/signImages";
 import React from 'react';
 import { SignupValidation } from '@/lib/validation'
 import { useToast } from '@/components/ui/use-toast';
+import Link from 'next/link';
 
 const signIn = () => {
   const handleSubmit = (event: React.FormEvent) => {
@@ -74,7 +75,7 @@ const signIn = () => {
           sign in
         </button>
 
-        <a href="#">Have an account</a>
+        <Link href="/sign-up">Need new Account</Link>
       </form>
     </div>
   );
