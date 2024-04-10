@@ -1,43 +1,52 @@
 'use client'
 import Input from '@/components/Input';
 import Image from 'next/image'
-import { emailIcon, nameIcon } from "@/constants";
+import { emailIcon, eyeIcon, nameIcon } from "@/constants";
+
+import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useForm } from "react-hook-form"
+import { useRouter } from 'next/navigation'
+import { SignupValidation } from '@/lib/validation'
+
 import { images } from "@/constants/signImages";
 import React from 'react';
-import { SignupValidation } from '@/lib/validation'
 import { useToast } from '@/components/ui/use-toast';
 import Link from 'next/link';
 
-const signIn = () => {
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+const signUp = () => {
+  const router = useRouter()
 
-    // pegando os valores
-    const form = event.target as HTMLFormElement;
-    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-    const password = (form.elements.namedItem("password") as HTMLInputElement).value;
+  const form = useForm<z.infer<typeof SignupValidation>>({
+    resolver: zodResolver(SignupValidation),
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+    },
+  });
 
-    // Validando os valores
-    const validationResult = SignupValidation.safeParse({ email, password });
-
-    if (validationResult.success) {
+  const handleSignup = async (user: z.infer<typeof SignupValidation>) => {
+    try {
 
       toast({
         title: "Form values are valid",
-        className: "bg-main-3 text-main-2",
-      })
-
-    } else {
-      const validationErrors: { [key: string]: string[] } = validationResult.error.flatten().fieldErrors;
-
-      // Exibir mensagens de erro em um toast
-      Object.keys(validationErrors).forEach((field: string) => {
-        toast({
-          title: `Error in ${field}`,
-          description: validationErrors[field][0], // Mensagem de erro específica para o campo
-          className: "bg-red-800 text-white",
-        });
+        description: `Name: ${user.name}, Email: ${user.email}, Password: ${user.password}`,
+        className: "bg-green-800 text-main-2",
       });
+      console.log(user);
+      router.push('/', { scroll: false });
+
+    } catch (error) {
+
+      toast({
+        title: "Error",
+        description: "An error occurred. Please try again later.",
+        className: "bg-red-800 text-white",
+      });
+      console.error(error);
+
     }
   };
 
@@ -45,10 +54,10 @@ const signIn = () => {
 
   return (
     <div className="signIn">
-        <div className="sign_titles">
+      <div className="sign_titles">
         <h1>Moda</h1>
         <h1>Express</h1>
-       </div>
+      </div>
 
 
       <div className="signIn_images">
@@ -64,25 +73,59 @@ const signIn = () => {
         ))}
       </div>
 
-      <form className="signIn_form" onSubmit={handleSubmit}>
-        <h2>Welcome</h2>
+      <Form {...form}>
 
-        <Input label='name' type='text' icon={nameIcon} name="name" />
+        <form className="signIn_form" onSubmit={form.handleSubmit(handleSignup)}>
+          <h2>Register</h2>
 
-        <Input label='email' type='text' icon={emailIcon} name="email" />
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <Input label='name' type='text' icon={nameIcon} {...field} />
+                </FormControl>
+                <FormMessage className='text-red-700'/>
+              </FormItem>
+            )}
+          />
 
-        <Input label='password' type='password' name="password" />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <Input label='email' type='text' icon={emailIcon} {...field} />
+                </FormControl>
+                <FormMessage className='text-red-700'/>
+              </FormItem>
+            )}
+          />
 
-        <button type="submit">
-          sign Up
-        </button>
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <Input label='password' type='password' icon={eyeIcon} {...field} />
+                </FormControl>
+                <FormMessage className='text-red-700'/>
+              </FormItem>
+            )}
+          />
 
-        <Link href="/sign-in">
-            Have an account 
-        </Link>
-      </form>
+          <button type="submit" >
+            sign Up
+          </button>
+
+          <Link href="/sign-in">Have an account</Link>
+        </form>
+      </Form>
     </div>
   );
 };
 
-export default signIn;
+export default signUp;

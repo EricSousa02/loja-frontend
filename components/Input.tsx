@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from "react";
-import { eyeIcon } from "@/constants";
 import Image from 'next/image';
 
 interface InputProps {
@@ -8,10 +7,9 @@ interface InputProps {
     label?: string;
     className?: string;
     icon?: string;
-    name?: string;
 }
 
-const Input: React.FC<InputProps> = ({ type = "password", label = "Label", className, icon, name }) => {
+const Input: React.FC<InputProps> = ({ type = "password", label = "Label", className, icon, ...props }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -21,7 +19,7 @@ const Input: React.FC<InputProps> = ({ type = "password", label = "Label", class
     return (
         <div className={`input-container ${className}`}>
 
-            <input type={showPassword ? "text" : type} name={name} required autoFocus autoComplete="off" />
+            <input type={showPassword ? "text" : type} required autoFocus autoComplete="off" {...props} />
             <label htmlFor="input" className="label">
                 {label}
             </label>
