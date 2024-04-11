@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Libre_Franklin, Italiana } from 'next/font/google'
 import { Toaster } from "@/components/ui/toaster";
-
-const LibreFranklin = Libre_Franklin({
-  subsets: ['latin'],
-  variable: "--font-mont",
-  weight: "400"
-})
 
 export const metadata: Metadata = {
   title: "loja",
@@ -21,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={LibreFranklin.className}>
+      <body className={`font-libreFranklin`}>
         {children}
         <Toaster />
       </body>

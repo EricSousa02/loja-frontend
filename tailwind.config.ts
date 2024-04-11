@@ -13,8 +13,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        libreFranklin: ['Libre Franklin', 'sans-serif'],
-        italiana: ['Italiana', 'serif'],
+        libreFranklin: "var(--font-libre-franklin)",
+        italiana: "var(--font-italiana)",
       },
       container: {
         center: true,
