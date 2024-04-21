@@ -22,14 +22,23 @@ const home = () => {
         </nav>
       </header>
 
-      <div className="home_content">
-          <div className="home_image"></div>
-          <div className="home_circle"></div>
-          <div className="home_title">
-            <h2> U're in love</h2>
-            <h2>with/</h2>
-            <h3>Moda</h3>
+      <div className="home_content_container">
+        <div className="home_image"></div>
+        <div className="home_content">
+          <div className="home_circle">
+            <div className="home_title">
+              <h2> U're in love</h2>
+              <h2>with/</h2>
+              <h3>Moda</h3>
+            </div>
           </div>
+          <div className="home_texts">
+            <p>Moda is fashion's heartbeat, pulsing with creativity.</p>
+            <p>where elegance and innovation dance in harmony.</p>
+          </div>
+        </div>
+       
+
       </div>
     </div>
   )

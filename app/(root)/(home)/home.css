@@ -1,102 +1,122 @@
-.home{
+.home {
     height: 100vh;
+
+    @apply bg-main-2;
 }
 
-.home header{
+.home header {
     position: fixed;
     top: 0;
     width: 100vw;
-    padding: 1rem;    
+    padding: 1rem;
 }
 
-.home header nav{
+.home header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-transform: capitalize;
 }
-.home header nav .logo{
+
+.home header nav .logo {
     height: 50px;
     width: 50px;
 
 }
-.home .home_content {
+
+.home .home_content_container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.home .home_content .home_image{
+
+.home .home_content_container .home_image {
     height: 80vh;
     width: 60vh;
-    background-color: rgb(232, 230, 230);
-    transform: translateX(50%);
-    z-index: -1;
-}
-.home .home_content .home_circle{
-    height: 70vh;
-    width: 70vh;
-    border: 1px solid #181818;
-    border-radius: 50%;
-}
-.home .home_content .home_title {
-    display: flex;
-    flex-direction: column;
-    transform: translateX(-60%);
+    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5cb93b59288187.5a1cd5f1b9edb.jpg')center/cover;
+    
 }
 
-.home .home_content .home_title h2{
+.home .home_content_container .home_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 3rem;
+}
+
+.home .home_content_container .home_content .home_circle {
+    height: 60vh;
+    width: 60vh;
+    border: 1px solid #181818;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.home .home_content_container .home_content .home_texts {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 10px;
+}
+
+.home .home_content_container .home_content .home_texts p {
+    width: 40%;
+    font-size: 14px;
+}
+
+.home .home_content_container .home_content .home_circle .home_title {
+    height: 100%;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(80%);
+
+}
+
+.home .home_content_container .home_content .home_circle .home_title h2 {
     @apply font-italiana;
     font-size: 5vw;
     font-weight: 100;
 }
-.home .home_content .home_title h3{
+
+.home .home_content_container .home_content .home_circle .home_title h3 {
     font-size: 7vw;
     font-weight: 100;
     text-transform: uppercase;
-    transform: translate(100px, -70px);
+    transform: translate(90px, -70px);
+
 }
-.home .home_content .home_title h2:nth-child(2){
+
+.home .home_content_container .home_content .home_circle .home_title h2:nth-child(2) {
     font-size: 3vw;
 }
+
 @media (max-width:930px) {
-    .home .home_content .home_circle{
+    .home .home_content_container .home_content .home_circle{
+        transform: translateX(-20%);
         height: 55vh;
-        width: 60vh;
-    }   
-
-    .home .home_content .home_title{
-        transform: translateX(-70%);
+        width: 55vh;
     }
-    .home .home_content .home_title h2{
-        font-size: 4vw;
+    ..home .home_content_container .home_content .home_texts p{
+        width: 100%;
     }
 }
-@media (max-width:768px) {
-    .home .home_content .home_circle{
-        height: 55vh;
-        width: 60vh;
-        
-    }   
-/* 
-    .home .home_content .home_title{
-        transform: translateX(-70%);
-    }
-    .home .home_content .home_title h2{
-        font-size: 4vw;
-    } */
-}
-
 
 @media (max-width:425px) {
-    .home header{
+    .home header {
         height: 100vh;
     }
-    .home header nav{
+
+    .home header nav {
         position: absolute;
         bottom: 5%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         gap: 1rem;
         padding: 5px 10px;
         backdrop-filter: blur(5px) saturate(200%);
@@ -105,10 +125,11 @@
         border: 1px solid rgba(209, 213, 219, 0.3);
     }
 
-    .home header nav a{
+    .home header nav a {
         font-size: 14px;
     }
-    .home header nav .logo{
+
+    .home header nav .logo {
         height: 40px;
         width: 40px;
     }
