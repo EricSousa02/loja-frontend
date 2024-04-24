@@ -23,7 +23,6 @@ const home = () => {
       </header>
 
       <div className="home_content_container">
-        <div className="home_image"></div>
         <div className="home_content">
           <div className="home_circle">
             <div className="home_title">
@@ -33,12 +32,11 @@ const home = () => {
             </div>
           </div>
           <div className="home_texts">
-            <p>Moda is fashion's heartbeat, pulsing with creativity.</p>
-            <p>where elegance and innovation dance in harmony.</p>
+            <h3>Moda</h3>
+            <h3>Elegance</h3>
+            <h3>Style</h3>
           </div>
         </div>
-       
-
       </div>
     </div>
   )
