@@ -14,9 +14,12 @@ import { images } from "@/constants/signImages";
 import React from 'react';
 import { useToast } from '@/components/ui/use-toast';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const signUp = () => {
   const router = useRouter()
+
+  const { t } = useTranslation()
 
   const form = useForm<z.infer<typeof SignupValidation>>({
     resolver: zodResolver(SignupValidation),
@@ -76,7 +79,7 @@ const signUp = () => {
       <Form {...form}>
 
         <form className="signIn_form" onSubmit={form.handleSubmit(handleSignup)}>
-          <h2>Register</h2>
+          <h2>{t('Register')}</h2>
 
           <FormField
             control={form.control}
@@ -84,7 +87,7 @@ const signUp = () => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input label='name' type='text' icon={nameIcon} {...field} />
+                  <Input label={t('name')} id="nameInput" type='text' icon={nameIcon} {...field} />
                 </FormControl>
                 <FormMessage className='text-red-700'/>
               </FormItem>
@@ -97,7 +100,7 @@ const signUp = () => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input label='email' type='text' icon={emailIcon} {...field} />
+                  <Input label={t('email')} id="emailInput" type='text' icon={emailIcon} {...field} />
                 </FormControl>
                 <FormMessage className='text-red-700'/>
               </FormItem>
@@ -110,7 +113,7 @@ const signUp = () => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input label='password' type='password' icon={eyeIcon} {...field} />
+                  <Input label={t('password')} id='passwordInput' type='password' icon={eyeIcon} {...field} />
                 </FormControl>
                 <FormMessage className='text-red-700'/>
               </FormItem>
@@ -118,10 +121,10 @@ const signUp = () => {
           />
 
           <button type="submit" >
-            sign Up
+          {t('sign up')}
           </button>
 
-          <Link href="/sign-in">Have an account</Link>
+          <Link href="/sign-in">{t('Have an account')}</Link>
         </form>
       </Form>
     </div>

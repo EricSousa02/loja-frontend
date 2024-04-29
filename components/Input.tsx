@@ -7,9 +7,10 @@ interface InputProps {
     label?: string;
     className?: string;
     icon?: string;
+    id?:string;
 }
 
-const Input: React.FC<InputProps> = ({ type = "password", label = "Label", className, icon, ...props }) => {
+const Input: React.FC<InputProps> = ({ type = "password", label = "", className, icon, id, ...props }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -19,8 +20,8 @@ const Input: React.FC<InputProps> = ({ type = "password", label = "Label", class
     return (
         <div className={`input-container ${className}`}>
 
-            <input type={showPassword ? "text" : type} required autoFocus autoComplete="off" {...props} />
-            <label htmlFor="input" className="label">
+            <input type={showPassword ? "text" : type} id={id} required autoFocus {...props} />
+            <label htmlFor={id} className="label">
                 {label}
             </label>
             {icon ?
