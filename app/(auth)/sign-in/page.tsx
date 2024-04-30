@@ -5,7 +5,7 @@ import { emailIcon, eyeIcon } from "@/constants";
 
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form"
 import { useRouter } from 'next/navigation'
 import { SigninValidation } from '@/lib/validation'
@@ -14,9 +14,13 @@ import { images } from "@/constants/signImages";
 import React from 'react';
 import { useToast } from '@/components/ui/use-toast';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+
 
 const signIn = () => {
   const router = useRouter()
+
+  const { t } = useTranslation()
 
   const form = useForm<z.infer<typeof SigninValidation>>({
     resolver: zodResolver(SigninValidation),
@@ -54,8 +58,8 @@ const signIn = () => {
   return (
     <div className="signIn">
       <div className="sign_titles">
-        <h1>Moda</h1>
-        <h1>Express</h1>
+        <h1 className="max-md:hidden">Moda</h1>
+        <h1 className="max-md:hidden">Express</h1>
       </div>
 
 
@@ -75,7 +79,7 @@ const signIn = () => {
       <Form {...form}>
 
         <form className="signIn_form" onSubmit={form.handleSubmit(handleSignin)}>
-          <h2>Welcome</h2>
+          <h2>{t("Welcome")}</h2>
 
           <FormField
             control={form.control}
@@ -83,7 +87,7 @@ const signIn = () => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input label='email' type='text' icon={emailIcon} {...field} />
+                  <Input label={t('email')} id="emailInput" type='text' icon={emailIcon} {...field} />
                 </FormControl>
                 <FormMessage className='text-red-700'/>
               </FormItem>
@@ -96,7 +100,7 @@ const signIn = () => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input label='password' type='password' icon={eyeIcon} {...field} />
+                  <Input label={t('password')} id='passwordInput' type='password' icon={eyeIcon} {...field} />
                 </FormControl>
                 <FormMessage className='text-red-700'/>
               </FormItem>
@@ -104,10 +108,10 @@ const signIn = () => {
           />
 
           <button type="submit" >
-            sign in
+          {t('sign in')}
           </button>
 
-          <Link href="/sign-up">Need new Account</Link>
+          <Link href="/sign-up">{t('Need new Account')}</Link>
         </form>
       </Form>
     </div>

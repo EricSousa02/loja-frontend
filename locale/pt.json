@@ -1,0 +1,13 @@
+{
+    "translation": {
+        "Welcome" : "Bem-vindo",
+        "password": "senha",
+        "name" : "nome",
+        "sign in" : "entrar",
+        "sign up" : "criar",
+        "Need new Account" : "Precisa de uma nova conta",
+        "Register" : "Cadastrar",
+        "Have an account" : "Já tem uma conta",
+        "translate" : "traduzir"
+    }
+}
