@@ -1,6 +1,6 @@
 .home {
     height: 100vh;
-
+    @apply bg-main-2;
 }
 
 .home header {
@@ -24,13 +24,13 @@
 }
 
 .home .home_content_container {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .home .home_content_container .home_content {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,9 +1,18 @@
+"use client"
 import React from 'react'
 import "./home.css"
 import { logoIcon } from '@/constants'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import { animateHome } from '@/app/utils/animation'
 
-const home = () => {
+
+
+const Home = () => {
+  useEffect(()=>{
+    animateHome()
+  },[])
+
   return (
     <div className='home'>
       <header>
