@@ -6,15 +6,31 @@
 .home header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100vw;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+    @apply text-white;
 }
 
 .home header nav {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-transform: capitalize;
+    gap: 10px;
+    margin-left: 1rem;
+    position: relative;
+}
+.home header nav::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    @apply bg-main-2;
+    width: 30%;
 }
 
 .home header nav .logo {
@@ -24,9 +40,12 @@
 }
 
 .home .home_content_container {
+    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/8d0abd194537223.65fd7889282c5.jpg') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    @apply text-white;
 }
 
 .home .home_content_container .home_content {
@@ -41,18 +60,24 @@
 .home .home_content_container .home_content .home_circle {
     height: 60vh;
     width: 60vh;
-    border: 1px solid #181818;
     border-radius: 50%;
+    @apply border-white border;
 }
 
 .home .home_content_container .home_content .home_texts {
+    position: absolute;
+    left: 0;
+    bottom: 5% ;
+    width: fit-content;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #181818;
+    gap: 5rem;
 }
 .home .home_content_container .home_content .home_texts h3{
+    rotate: 90deg;
     text-transform: uppercase;
+    font-size: 13px;
 }
 
 .home .home_content_container .home_content .home_texts p {
@@ -85,9 +110,15 @@
 
 .home .home_content_container .home_content .home_circle .home_title h2:nth-child(2) {
     font-size: 3vw;
+    transform: translateX(10px);
 }
 
 @media (max-width:768px) {
+    .home header nav::after {
+        width: 50%;
+    }
+    
+
 
     .home .home_content_container .home_content .home_circle {
         height: 50vh;
@@ -104,30 +135,22 @@
 
 
 @media (max-width:425px) {
-    .home header {
-        height: 100vh;
-    }
 
     .home header nav {
-        position: absolute;
+        background: rgba(255,255,255,0.2);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255,255,255,0.1);
+
+        position: fixed;
         bottom: 5%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        gap: 1rem;
-        padding: 5px 10px;
-        backdrop-filter: blur(5px) saturate(200%);
-        -webkit-backdrop-filter: blur(5px) saturate(200%);
-        background-color: rgba(255, 255, 255, 0.09);
-        border: 1px solid rgba(209, 213, 219, 0.3);
+        transform: translate(-50%,-50%);
+        padding: 10px;
+        width: fit-content;
     }
-
-    .home header nav a {
-        font-size: 14px;
-    }
-
-    .home header nav .logo {
-        height: 40px;
-        width: 40px;
+    .home header nav::after {
+        display: none;
     }
 
     .home .home_content_container .home_content .home_circle .home_title h2{
@@ -135,5 +158,12 @@
     }
     .home .home_content_container .home_content .home_circle .home_title h3{
         transform: translateX(0px);
+    }
+}
+
+@media (max-width:320px){
+    .home .home_content_container .home_content .home_circle{
+        height: 40vh;
+        width: 40vh;
     }
 }

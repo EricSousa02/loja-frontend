@@ -16,20 +16,23 @@ const Home = () => {
   return (
     <div className='home'>
       <header>
-        <nav>
-          <a href="#">index</a>
-          <a href="#">index</a>
-          <a className='logo' href="#">
-            <Image
+         <Image
               src={logoIcon}
               width={50}
               height={50}
               alt="logo image"
-            /></a>
-          <a href="#">index</a>
-          <a href="#">index</a>
+            />     
+        <nav>
+          <a href="#">Index</a>
+          <a href="#">Index</a>
+          <a href="#">Index</a>
         </nav>
+        <div className="btn_translate">
+          <p>translate</p>
+        </div>
       </header>
+
+
 
       <div className="home_content_container">
         <div className="home_content">
