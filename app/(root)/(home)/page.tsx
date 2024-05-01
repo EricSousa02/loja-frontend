@@ -31,9 +31,6 @@ const Home = () => {
           <p>translate</p>
         </div>
       </header>
-
-
-
       <div className="home_content_container">
         <div className="home_content">
           <div className="home_circle">
@@ -48,6 +45,19 @@ const Home = () => {
             <h3>Elegance</h3>
             <h3>Style</h3>
           </div>
+        </div>
+      </div>
+      <div className="style_container">
+        <div className="style_slider">
+          <section>
+            <h1>First Section</h1>
+          </section>
+          <section>
+            Deuxiéme Section
+          </section>
+          <section>
+            Troisiem Section
+          </section>
         </div>
       </div>
     </div>
