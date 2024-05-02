@@ -50,7 +50,19 @@ const Home = () => {
       <div className="style_container">
         <div className="style_slider">
           <section>
-            <h1>First Section</h1>
+            <div className="formal_image">
+              <p> boost confidence and project a sense of authority.</p>
+              <p>Elevate your style with our stunning formal wear collection.</p>
+            </div>
+            <div className="formal_title">
+              <h1>Formal</h1>
+              <h1>Atteri</h1>
+
+              <div className="formal_subTitle">
+              <p>New Generations</p>
+              <p>Beautiful Styles</p>
+            </div>
+            </div>
           </section>
           <section>
             Deuxiéme Section

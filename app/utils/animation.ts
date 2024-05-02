@@ -24,21 +24,5 @@ export const animateHome= () =>{
         }
     })
 
-    const slider = (document.querySelector('.style_slider') as HTMLElement);
-
-    const tl = gsap.timeline({
-        defaults:{
-            ease:"none"
-        },
-        scrollTrigger:{
-            trigger:slider,
-            pin:true,
-            scrub:2,
-            end: () => "+=" + slider.offsetWidth,
-            horizontal: true
-        }
-    })
-    tl.to(slider,{
-        xPercent:-66
-    })
+     
 }   
