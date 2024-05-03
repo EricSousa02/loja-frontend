@@ -4,42 +4,6 @@
 
 }
 
-.home header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index:100;
-    @apply text-white;
-}
-
-.home header nav {
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    margin-left: 1rem;
-    position: relative;
-}
-.home header nav::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    @apply bg-main-2;
-    width: 30%;
-}
-
-.home header nav .logo {
-    height: 50px;
-    width: 50px;
-
-}
-
 .home .home_content_container {
     background: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/8d0abd194537223.65fd7889282c5.jpg') center/cover;
     display: flex;
@@ -68,14 +32,15 @@
 .home .home_content_container .home_content .home_texts {
     position: absolute;
     left: 0;
-    bottom: 5% ;
+    bottom: 5%;
     width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
 }
-.home .home_content_container .home_content .home_texts h3{
+
+.home .home_content_container .home_content .home_texts h3 {
     rotate: 90deg;
     text-transform: uppercase;
     font-size: 13px;
@@ -116,21 +81,22 @@
 
 /* SECTION STYLE */
 
-.style_container{
+.style_container {
     height: 100vh;
-    @apply bg-main-2;
-} 
+}
 
-.style_container .style_slider section{
+.style_container .style_slider section {
     height: 100vh;
     display: flex;
     align-items: center;
+    @apply bg-main-2;
 }
-.style_container .style_slider section .formal_image{
-    height:80vh;
+
+.style_container .style_slider section .formal_image {
+    height: 80vh;
     width: 70vw;
     background: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/e4b6f7195348601.660c2e4a9e3f9.jpg') center/cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
     margin-left: 2rem;
 
     display: flex;
@@ -140,44 +106,49 @@
     position: relative;
 
 }
-.style_container .style_slider section .formal_image::after{
+
+.style_container .style_slider section .formal_image::after {
     position: absolute;
     content: "";
     height: 1px;
     width: 30%;
-    @apply bg-main-2 ;
+    @apply bg-main-2;
     left: 50%;
     bottom: 5%;
-    transform: translate(-50%,-50%); 
+    transform: translate(-50%, -50%);
 }
 
-.style_container .style_slider section .formal_image p{
+.style_container .style_slider section .formal_image p {
     width: 30%;
     @apply text-white;
 }
-.style_container .style_slider section .formal_image p:nth-child(1){
+
+.style_container .style_slider section .formal_image p:nth-child(1) {
     text-align: start;
 }
-.style_container .style_slider section .formal_image p:nth-child(2){
+
+.style_container .style_slider section .formal_image p:nth-child(2) {
     text-align: end;
 }
-.style_container .style_slider section .formal_title{
+
+.style_container .style_slider section .formal_title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8rem;
 }
-.style_container .style_slider section .formal_title h1{
-    @apply font-italiana ;
+
+.style_container .style_slider section .formal_title h1 {
     font-size: 8vw;
     line-height: 1rem;
 }
-.style_container .style_slider section .formal_title h1:nth-child(1){
+
+.style_container .style_slider section .formal_title h1:nth-child(1) {
     transform: translateX(-150px);
 }
 
-.style_container .style_slider section .formal_title .formal_subTitle{
+.style_container .style_slider section .formal_title .formal_subTitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,33 +156,61 @@
     gap: 1rem;
     position: relative;
 }
-.style_container .style_slider section .formal_title .formal_subTitle p{
+
+.style_container .style_slider section .formal_title .formal_subTitle p {
     width: 50%;
 }
-.style_container .style_slider section .formal_title .formal_subTitle p:nth-child(1){
+
+.style_container .style_slider section .formal_title .formal_subTitle p:nth-child(1) {
     transform: translateX(30px);
 }
-.style_container .style_slider section .formal_title .formal_subTitle::after{
-    position:absolute;
+
+.style_container .style_slider section .formal_title .formal_subTitle::after {
+    position: absolute;
     content: "";
     height: 1px;
     width: 100%;
     top: 50%;
     left: 0%;
-    @apply bg-main-1 ;
-} 
-.style_container .style_slider section:nth-child(2){
-    background-color: indigo;
+    @apply bg-main-1;
 }
 
-.style_container .style_slider section:nth-child(3){
+/* Section Casual */
+
+.style_container .style_slider section:nth-child(2) {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.style_container .style_slider section:nth-child(2) .casual_content {
+    height: 80vh;
+    width: 90vw;
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/e9d23f195540375.660f15250e805.jpg")center/cover;
+    position: relative;
+}
+
+.style_container .style_slider section:nth-child(2) .casual_content .casual_title {
+    height: 100%;
+    
+}
+
+.style_container .style_slider section:nth-child(2) .casual_content .casual_title h1 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vw;
+}
+
+.style_container .style_slider section:nth-child(3) {
     background-color: rgb(23, 85, 95);
 }
 
-@media (max-width:960px){
-    .style_container .style_slider section .formal_title{
-        gap:3rem;
-    }   
+
+@media (max-width:960px) {
+    .style_container .style_slider section .formal_title {
+        gap: 3rem;
+    }
 }
 
 @media (max-width:768px) {
@@ -224,29 +223,32 @@
         width: 50vh;
     }
 
-    .home .home_content_container .home_content .home_circle .home_title h2{
+    .home .home_content_container .home_content .home_circle .home_title h2 {
         font-size: 50px;
     }
-    .home .home_content_container .home_content .home_circle .home_title h3{
+
+    .home .home_content_container .home_content .home_circle .home_title h3 {
         font-size: 60px;
     }
-    
-    .style_container .style_slider section .formal_image p{
+
+    .style_container .style_slider section .formal_image p {
         font-size: 10px;
     }
 
-    .style_container .style_slider section .formal_title h1{
+    .style_container .style_slider section .formal_title h1 {
         font-size: 50px;
     }
 
-    .style_container .style_slider section .formal_title h1:nth-child(1){
+    .style_container .style_slider section .formal_title h1:nth-child(1) {
         transform: translateX(-100px);
     }
-    .style_container .style_slider section .formal_title .formal_subTitle p{
+
+    .style_container .style_slider section .formal_title .formal_subTitle p {
         font-size: 12px;
         width: 80%;
     }
-    .style_container .style_slider section .formal_title .formal_subTitle p:nth-child(1){
+
+    .style_container .style_slider section .formal_title .formal_subTitle p:nth-child(1) {
         transform: translateX(0px);
     }
 }
@@ -254,48 +256,33 @@
 
 @media (max-width:425px) {
 
-    .home header nav {
-        background: rgba(255,255,255,0.2);
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255,255,255,0.1);
-
-        position: fixed;
-        bottom: 5%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        padding: 10px;
-        width: fit-content;
-    }
-    .home header nav::after {
-        display: none;
-    }
-
-    .home .home_content_container .home_content .home_circle .home_title h2{
+    .home .home_content_container .home_content .home_circle .home_title h2 {
         transform: translateX(0px);
     }
-    .home .home_content_container .home_content .home_circle .home_title h3{
+
+    .home .home_content_container .home_content .home_circle .home_title h3 {
         transform: translateX(0px);
     }
-    
-    .style_container .style_slider section .formal_image{
+
+    .style_container .style_slider section .formal_image {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .style_container .style_slider section .formal_image::after{
+    .style_container .style_slider section .formal_image::after {
         left: 5%;
         bottom: 20%;
         height: 30%;
         width: 1px;
     }
-    .style_container .style_slider section .formal_image p:nth-child(2){
+
+    .style_container .style_slider section .formal_image p:nth-child(2) {
         text-align: left;
     }
 }
 
-@media (max-width:320px){
-    .home .home_content_container .home_content .home_circle{
+@media (max-width:320px) {
+    .home .home_content_container .home_content .home_circle {
         height: 40vh;
         width: 40vh;
     }

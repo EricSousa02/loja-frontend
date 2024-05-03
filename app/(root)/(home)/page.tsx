@@ -1,8 +1,6 @@
 "use client"
 import React from 'react'
 import "./home.css"
-import { logoIcon } from '@/constants'
-import Image from 'next/image'
 import { useEffect } from 'react'
 import { animateHome } from '@/app/utils/animation'
 
@@ -15,22 +13,6 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <header>
-         <Image
-              src={logoIcon}
-              width={50}
-              height={50}
-              alt="logo image"
-            />     
-        <nav>
-          <a href="#">Index</a>
-          <a href="#">Index</a>
-          <a href="#">Index</a>
-        </nav>
-        <div className="btn_translate">
-          <p>translate</p>
-        </div>
-      </header>
       <div className="home_content_container">
         <div className="home_content">
           <div className="home_circle">
@@ -65,7 +47,12 @@ const Home = () => {
             </div>
           </section>
           <section>
-            Deuxiéme Section
+            <div className="casual_content">
+              <div className="casual_title">
+                <h1>Casual</h1>
+                <h1>Wear</h1>
+              </div>
+            </div>
           </section>
           <section>
             Troisiem Section

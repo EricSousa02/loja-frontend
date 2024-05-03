@@ -2,6 +2,9 @@
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import "@/lib/i18n"
+import { logoIcon } from '@/constants'
+import Image from 'next/image'
+import "./NavBar.css"
 
 const NavBar = ({ hidden }: { hidden?: boolean }) => {
 
@@ -24,9 +27,25 @@ const NavBar = ({ hidden }: { hidden?: boolean }) => {
     }
 
     return (
-        <div className={`${hidden ? "hidden" : ""}`}>
-            <button onClick={handleChangeLanguage}>{t('translate')}</button>
-        </div>
+        <header>
+            <Image
+                src={logoIcon}
+                width={50}
+                height={50}
+                alt="logo image"
+            />
+            <nav>
+                <a href="#">Index</a>
+                <a href="#">Index</a>
+                <a href="#">Index</a>
+            </nav>
+            <div className="btn_translate">
+                <div className={`${hidden ? "hidden" : ""}`}>
+                    <button onClick={handleChangeLanguage}>{t('translate')}</button>
+                </div>
+            </div>
+        </header>
+
 
     )
 }

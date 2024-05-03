@@ -1,5 +1,5 @@
 'use client'
-import Input from '@/components/Input';
+import Input from '@/components/Input/Input';
 import Image from 'next/image'
 import { emailIcon, eyeIcon } from "@/constants";
 
