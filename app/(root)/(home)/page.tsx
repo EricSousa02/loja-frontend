@@ -52,6 +52,20 @@ const Home = () => {
                 <h1>Casual</h1>
                 <h1>Wear</h1>
               </div>
+              <div className="casual_sentences">
+                <div className="sentence">
+                  <p> where comfort and </p>
+                  <p>confidence intertwine.</p>
+                </div>
+                <div className="m_sentence">
+                      <h2>Positive</h2>
+                      <h2>MOOD</h2>
+                </div>
+                <div className="sentence">
+                  <p> the unofficial uniform of </p>
+                  <p>cozy nights under the stars.</p>
+                </div>
+              </div>
             </div>
           </section>
           <section>

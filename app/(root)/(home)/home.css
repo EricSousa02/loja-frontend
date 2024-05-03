@@ -190,17 +190,54 @@
     position: relative;
 }
 
-.style_container .style_slider section:nth-child(2) .casual_content .casual_title {
-    height: 100%;
-    
-}
-
 .style_container .style_slider section:nth-child(2) .casual_content .casual_title h1 {
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 6vw;
+    font-size: 8vw;
 }
+.style_container .style_slider section:nth-child(2) .casual_content .casual_title h1:nth-child(1){
+    top: 0%;
+}
+.style_container .style_slider section:nth-child(2) .casual_content .casual_title h1:nth-child(2){
+    bottom: -20%;
+}
+
+.style_container .style_slider section:nth-child(2) .casual_content .casual_sentences{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .sentence{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+.style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .sentence::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    @apply bg-main-2; 
+}
+.style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .m_sentence {
+        text-align: center;
+}
+.style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .m_sentence h2{
+    text-transform: uppercase;
+    @apply text-main-1 ;
+}
+.style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .sentence p{
+    @apply text-main-2;
+    text-align: center;
+}
+
+
+
 
 .style_container .style_slider section:nth-child(3) {
     background-color: rgb(23, 85, 95);
@@ -211,6 +248,16 @@
     .style_container .style_slider section .formal_title {
         gap: 3rem;
     }
+    .style_container .style_slider section:nth-child(2) .casual_content .casual_title h1{
+        font-size: 70px;
+    }
+    .style_container .style_slider section:nth-child(2) .casual_content .casual_title h1:nth-child(1){
+        top: 0%;
+    }
+    .style_container .style_slider section:nth-child(2) .casual_content .casual_title h1:nth-child(2){
+        bottom: -17%;
+    }
+    
 }
 
 @media (max-width:768px) {
@@ -250,6 +297,19 @@
 
     .style_container .style_slider section .formal_title .formal_subTitle p:nth-child(1) {
         transform: translateX(0px);
+    }
+    .style_container .style_slider section:nth-child(2) .casual_content .casual_title h1:nth-child(2){
+        bottom: -20%;
+    }
+
+    .style_container .style_slider section:nth-child(2) .casual_content .casual_sentences {
+        flex-direction: column;
+    }
+    .style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .sentence{
+        gap: 0px;
+    }
+    .style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .sentence::after{
+        display: none;
     }
 }
 
