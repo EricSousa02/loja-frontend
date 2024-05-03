@@ -171,7 +171,7 @@
 .style_container .style_slider section .formal_title h1{
     @apply font-italiana ;
     font-size: 8vw;
-    line-height: 1.5rem;
+    line-height: 1rem;
 }
 .style_container .style_slider section .formal_title h1:nth-child(1){
     transform: translateX(-150px);
@@ -207,6 +207,13 @@
 .style_container .style_slider section:nth-child(3){
     background-color: rgb(23, 85, 95);
 }
+
+@media (max-width:960px){
+    .style_container .style_slider section .formal_title{
+        gap:3rem;
+    }   
+}
+
 @media (max-width:768px) {
     .home header nav::after {
         width: 50%;
@@ -222,6 +229,25 @@
     }
     .home .home_content_container .home_content .home_circle .home_title h3{
         font-size: 60px;
+    }
+    
+    .style_container .style_slider section .formal_image p{
+        font-size: 10px;
+    }
+
+    .style_container .style_slider section .formal_title h1{
+        font-size: 50px;
+    }
+
+    .style_container .style_slider section .formal_title h1:nth-child(1){
+        transform: translateX(-100px);
+    }
+    .style_container .style_slider section .formal_title .formal_subTitle p{
+        font-size: 12px;
+        width: 80%;
+    }
+    .style_container .style_slider section .formal_title .formal_subTitle p:nth-child(1){
+        transform: translateX(0px);
     }
 }
 
@@ -250,6 +276,21 @@
     }
     .home .home_content_container .home_content .home_circle .home_title h3{
         transform: translateX(0px);
+    }
+    
+    .style_container .style_slider section .formal_image{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .style_container .style_slider section .formal_image::after{
+        left: 5%;
+        bottom: 20%;
+        height: 30%;
+        width: 1px;
+    }
+    .style_container .style_slider section .formal_image p:nth-child(2){
+        text-align: left;
     }
 }
 
