@@ -7,9 +7,9 @@ import { animateHome } from '@/app/utils/animation'
 
 
 const Home = () => {
-  useEffect(()=>{
+  useEffect(() => {
     animateHome()
-  },[])
+  }, [])
 
   return (
     <div className='home'>
@@ -41,9 +41,9 @@ const Home = () => {
               <h1>Atteri</h1>
 
               <div className="formal_subTitle">
-              <p>New Generations</p>
-              <p>Beautiful Styles</p>
-            </div>
+                <p>New Generations</p>
+                <p>Beautiful Styles</p>
+              </div>
             </div>
           </section>
           <section>
@@ -58,8 +58,8 @@ const Home = () => {
                   <p>confidence intertwine.</p>
                 </div>
                 <div className="m_sentence">
-                      <h2>Positive</h2>
-                      <h2>MOOD</h2>
+                  <h2>Positive</h2>
+                  <h2>MOOD</h2>
                 </div>
                 <div className="sentence">
                   <p> the unofficial uniform of </p>
@@ -69,7 +69,20 @@ const Home = () => {
             </div>
           </section>
           <section>
-            Troisiem Section
+            <div className="vixen_title">
+              <h1>Vixen - Attire</h1>
+              <p>emobides allure and sophistication</p>
+            </div>
+
+             <div className="vixen_subtitles">
+                <span>Confident</span>
+                <span>Captivating</span>
+                <span>Alluring</span>
+              </div>
+
+            <div className="vixen_image">
+              <h1>Discover the allure</h1>
+            </div>
           </section>
         </div>
       </div>
