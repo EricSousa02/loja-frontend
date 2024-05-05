@@ -243,6 +243,7 @@
     text-align: center;
 }
 
+/* Section vixen  */
 
 .style_container .style_slider section:nth-child(3) {
     width: 100%;
@@ -282,8 +283,8 @@
 .style_container .style_slider section:nth-child(3) .vixen_image {
     height: 80vh;
     width: 60vw;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/77f19f161590449.63c7d1a1835a1.jpg")center/cover;
-    position: relative;
+   background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/77f19f161590449.63c7d1a1835a1.jpg")center/cover;   
+   position: relative;
 }
 
 .style_container .style_slider section:nth-child(3) .vixen_image h1 {
@@ -369,6 +370,18 @@
     .style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .sentence::after {
         display: none;
     }
+
+    .style_container .style_slider section:nth-child(3) {
+        padding: 0 1rem;
+    }
+
+    .style_container .style_slider section:nth-child(3) .vixen_title h1{
+        font-size: 30px;    
+    }
+
+    .style_container .style_slider section:nth-child(3) .vixen_title p{
+        font-size: 12px;
+    }
 }
 
 
@@ -400,6 +413,12 @@
 
     .style_container .style_slider section:nth-child(2) .casual_content .casual_sentences .sentence p {
         font-size: 13px;
+    }
+    .style_container .style_slider section:nth-child(3) .vixen_subtitles{
+        gap: 13px;
+    }
+    .style_container .style_slider section:nth-child(3) .vixen_subtitles span{
+        font-size: 12px;
     }
 }
 
