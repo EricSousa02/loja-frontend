@@ -81,7 +81,7 @@ const Home = () => {
               </div>
 
             <div className="vixen_image">
-              <h1>Discover the allure</h1>
+              <h1 className='vixen_image_text'>Discover the allure</h1>
             </div>
           </section>
         </div>

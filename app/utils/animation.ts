@@ -23,6 +23,51 @@ export const animateHome= () =>{
             scrub:1,
         }
     })
+    gsap.from(".formal_image",{
+        y:70,
+        scrollTrigger:{
+            trigger:".formal_image",
+            start:"-80% center",
+            end:"-60% center",
+            scrub:1,
+        }
+    })
+    gsap.from(".formal_title",{
+        y:-70,
+        scrollTrigger:{
+            trigger:".formal_image",
+            start:"-80% center",
+            end:"-60% center",
+            scrub:1,
+        }
+    })
 
-     
+    gsap.from(".casual_content",{
+        y:50,
+        scrollTrigger:{
+            trigger:".casual_content",
+            start:"-90% center",
+            end:"-60% center",
+            scrub:1,
+        }
+    })
+    gsap.from(".vixen_image",{
+        y:50,
+        scrollTrigger:{
+            trigger:".casual_content",
+            start:"top center",
+            end:"0% center",
+            scrub:1,
+        }
+    })
+    gsap.from(".vixen_image_text",{
+        y:-70,
+        scrollTrigger:{
+            trigger:".casual_content",
+            start:"top center",
+            end:"0% center",
+            scrub:1,
+        }
+    })
+ 
 }   
