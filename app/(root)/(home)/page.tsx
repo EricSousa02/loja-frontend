@@ -1,18 +1,16 @@
-"use client"
-import React from 'react'
-import "./home.css"
-import { useEffect } from 'react'
-import { animateHome } from '@/app/utils/animation'
-
-
+"use client";
+import React from "react";
+import "./home.css";
+import { useEffect } from "react";
+import { animateHome } from "@/app/utils/animation";
 
 const Home = () => {
   useEffect(() => {
-    animateHome()
-  }, [])
+    animateHome();
+  }, []);
 
   return (
-    <div className='home'>
+    <div className="home">
       <div className="home_content_container">
         <div className="home_content">
           <div className="home_circle">
@@ -34,7 +32,9 @@ const Home = () => {
           <section>
             <div className="formal_image">
               <p> boost confidence and project a sense of authority.</p>
-              <p>Elevate your style with our stunning formal wear collection.</p>
+              <p>
+                Elevate your style with our stunning formal wear collection.
+              </p>
             </div>
             <div className="formal_title">
               <h1>Formal</h1>
@@ -74,20 +74,31 @@ const Home = () => {
               <p>emobides allure and sophistication</p>
             </div>
 
-             <div className="vixen_subtitles">
-                <span>Confident</span>
-                <span>Captivating</span>
-                <span>Alluring</span>
-              </div>
+            <div className="vixen_subtitles">
+              <span>Confident</span>
+              <span>Captivating</span>
+              <span>Alluring</span>
+            </div>
 
             <div className="vixen_image">
-              <h1 className='vixen_image_text'>Discover the allure</h1>
+              <h1 className="vixen_image_text">Discover the allure</h1>
             </div>
           </section>
         </div>
       </div>
+      <div className="products_container">
+        <div className="new_collection">
+          <h1>New Collection</h1>
+          <h3 className="new_collection-hl">This is fashion</h3>
+          <img
+            className="new_collection_image"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8821a6195279779.660b13f55b527.jpg"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

@@ -1,7 +1,6 @@
 .home {
     height: 100vh;
     @apply bg-main-2;
-
 }
 
 .home .home_content_container {
@@ -90,6 +89,7 @@
     display: flex;
     align-items: center;
     @apply bg-main-2;
+    overflow: hidden;
 }
 
 .style_container .style_slider section .formal_image {
@@ -296,7 +296,46 @@
     @apply text-main-2 ;
 }
 
-
+.products_container{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    bottom: -300%;
+    overflow: hidden;
+}
+.products_container .new_collection{
+    @apply bg-main-3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.products_container .new_collection h1{
+    font-size: 7vw;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @apply text-main-2 z-10;
+}
+.products_container .new_collection h3{
+    width: 100vw;
+    font-size: 17vw;
+    opacity: 0.4;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    @apply text-main-4 font-italiana;
+}
+.products_container .new_collection .new_collection_image{
+    height: 80vh;
+    width: 30vw;
+    object-fit: cover;
+    z-index: 1;
+    transform: translateY(-100px);
+}
 @media (max-width:960px) {
     .style_container .style_slider section .formal_title {
         gap: 3rem;
