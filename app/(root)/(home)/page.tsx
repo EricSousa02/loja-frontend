@@ -49,8 +49,8 @@ const Home = () => {
           <section>
             <div className="casual_content">
               <div className="casual_title">
-                <h1>Casual</h1>
-                <h1>Wear</h1>
+                <h1 className="casual_title_f">Casual</h1>
+                <h1 className="casual_title_s">Wear</h1>
               </div>
               <div className="casual_sentences">
                 <div className="sentence">

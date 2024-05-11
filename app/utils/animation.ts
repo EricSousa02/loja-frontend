@@ -32,7 +32,7 @@ export const animateHome = () => {
       scrub: 1,
     },
   });
-  gsap.from(".formal_title", {
+  gsap.to(".formal_title", {
     y: -70,
     scrollTrigger: {
       trigger: ".formal_image",
@@ -41,8 +41,38 @@ export const animateHome = () => {
       scrub: 1,
     },
   });
-  gsap.from(".vixen_image", {
-    y: 70,
+  gsap.to(".casual_content", {
+    y: 50,
+    scrollTrigger: {
+      trigger: ".casual_content",
+      start: "-80% center",
+      end: "-40% center",
+      scrub: 1,
+    },
+  });
+  gsap.to(".casual_title_f", {
+    x: 100,
+    scrollTrigger: {
+      trigger: ".casual_content",
+      start: "-90% center",
+      end: "-40% center",
+      scrub: 1,
+    },
+  });
+
+  gsap.to(".casual_title_s", {
+    x: -150,
+    scrollTrigger: {
+      trigger: ".casual_content",
+      start: "-90% center",
+      end: "-40% center",
+      scrub: 1,
+     
+    },
+  });
+
+  gsap.to(".vixen_image", {
+    y: 50,
     scrollTrigger: {
       trigger: ".casual_content",
       start: "top center",
@@ -50,7 +80,7 @@ export const animateHome = () => {
       scrub: 1,
     },
   });
-  gsap.from(".vixen_image_text", {
+  gsap.to(".vixen_image_text", {
     y: -70,
     scrollTrigger: {
       trigger: ".casual_content",

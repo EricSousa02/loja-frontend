@@ -96,7 +96,6 @@
     height: 80vh;
     width: 70vw;
     background: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/e4b6f7195348601.660c2e4a9e3f9.jpg') center/cover;
-    background-attachment: fixed;
     margin-left: 2rem;
 
     display: flex;
