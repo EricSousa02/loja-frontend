@@ -50,27 +50,6 @@ export const animateHome = () => {
       scrub: 1,
     },
   });
-  gsap.to(".casual_title_f", {
-    x: 100,
-    scrollTrigger: {
-      trigger: ".casual_content",
-      start: "-90% center",
-      end: "-40% center",
-      scrub: 1,
-    },
-  });
-
-  gsap.to(".casual_title_s", {
-    x: -150,
-    scrollTrigger: {
-      trigger: ".casual_content",
-      start: "-90% center",
-      end: "-40% center",
-      scrub: 1,
-     
-    },
-  });
-
   gsap.to(".vixen_image", {
     y: 50,
     scrollTrigger: {
