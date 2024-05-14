@@ -303,7 +303,7 @@
     overflow: hidden;
 }
 .products_container .new_collection{
-    @apply bg-main-3;
+    @apply bg-main-1;
     height: 100vh;
     display: flex;
     flex-direction: column;
