@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import "./home.css";
+import Image from 'next/image'
 import { useEffect } from "react";
 import { animateHome } from "@/app/utils/animation";
 
@@ -90,11 +91,16 @@ const Home = () => {
         <div className="new_collection">
           <h1>New Collection</h1>
           <h3 className="new_collection-hl">This is fashion</h3>
-          <img
+           <Image
             className="new_collection_image"
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8821a6195279779.660b13f55b527.jpg"
-            alt=""
-          />
+              src={"/assets/homeImages/newCollection-image.jpg"}
+              width={1000}
+              height={1000}
+              alt={"teste"}
+            />
+        </div>
+        <div className="best_sellers">
+          <h2>Bestsellers</h2>
         </div>
       </div>
     </div>
