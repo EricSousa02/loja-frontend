@@ -2,6 +2,7 @@
 import React from "react";
 import "./home.css";
 import Image from 'next/image'
+import Card from "@/components/Card/Card";
 import { useEffect } from "react";
 import { animateHome } from "@/app/utils/animation";
 
@@ -96,12 +97,20 @@ const Home = () => {
               src={"/assets/homeImages/newCollection-image.jpg"}
               width={1000}
               height={1000}
-              alt={"teste"}
+              alt={"woman purple outfit"}
             />
         </div>
         <div className="best_sellers">
           <h2>Bestsellers</h2>
+          <div className="best_sellers_products">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            
+         </div> 
         </div>
+       
       </div>
     </div>
   );

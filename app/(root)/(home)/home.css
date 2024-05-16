@@ -337,7 +337,6 @@
 }
 .products_container .best_sellers{
     @apply bg-main-1 text-main-2;
-    height: 100vh;
 }
 .products_container .best_sellers h2{
     border-top:1px solid  #FAF3ED;
@@ -346,6 +345,13 @@
     font-size: 4vw;
     text-transform: uppercase;
     font-weight: 100;
+}
+.products_container .best_sellers .best_sellers_products{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 @media (max-width:960px) {
     .style_container .style_slider section .formal_title {

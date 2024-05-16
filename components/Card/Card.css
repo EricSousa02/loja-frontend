@@ -1,0 +1,16 @@
+.card{
+    height: 400px;
+    width: 300px;
+    border: 2px solid #FAF3ED ;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 90%;
+        width: 90%;
+        object-fit: cover;
+    }
+}
