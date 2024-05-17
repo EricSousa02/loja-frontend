@@ -1,16 +1,22 @@
 .card{
     height: 400px;
     width: 300px;
-    border: 2px solid #FAF3ED ;
-    border-top-width: 1px;
-    border-left-width: 1px;
-    border-right-width: 1px;
+    border: 1px solid #FAF3ED ;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    cursor: pointer;
     img{
         height: 90%;
         width: 90%;
         object-fit: cover;
+    }
+    .card_details{
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
     }
 }

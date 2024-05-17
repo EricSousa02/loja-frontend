@@ -103,10 +103,9 @@ const Home = () => {
         <div className="best_sellers">
           <h2>Bestsellers</h2>
           <div className="best_sellers_products">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <Card productImage="/assets/cardImages/moletom.jpg" productName="Premier" productPrice={0.99}/>
+            <Card productImage="/assets/cardImages/moletom.jpg" productName="Deuxième" productPrice={0.99}/>
+            <Card productImage="/assets/cardImages/moletom.jpg" productName="Troisième" productPrice={0.99}/>
             
          </div> 
         </div>

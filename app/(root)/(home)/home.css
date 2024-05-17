@@ -339,8 +339,6 @@
     @apply bg-main-1 text-main-2;
 }
 .products_container .best_sellers h2{
-    border-top:1px solid  #FAF3ED;
-    border-bottom:1px solid  #FAF3ED;
     padding: 1rem 0 1rem 13px;
     font-size: 4vw;
     text-transform: uppercase;
@@ -351,6 +349,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
     flex-wrap: wrap;
 }
 @media (max-width:960px) {
