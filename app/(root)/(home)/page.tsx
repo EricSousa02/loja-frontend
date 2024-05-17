@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Card from "@/components/Card/Card";
 import { useEffect } from "react";
 import { animateHome } from "@/app/utils/animation";
+import { bestSellers } from "@/constants/bestSellers";
+
 
 const Home = () => {
   useEffect(() => {
@@ -103,10 +105,13 @@ const Home = () => {
         <div className="best_sellers">
           <h2>Bestsellers</h2>
           <div className="best_sellers_products">
-            <Card productImage="/assets/cardImages/moletom.jpg" productName="Premier" productPrice={0.99}/>
-            <Card productImage="/assets/cardImages/moletom.jpg" productName="Deuxième" productPrice={0.99}/>
-            <Card productImage="/assets/cardImages/moletom.jpg" productName="Troisième" productPrice={0.99}/>
-            
+            {bestSellers.map(sellers=>(
+                 <Card  key={sellers.id} // Ensure each card has a unique key
+                 productImage={sellers.productImage}
+                 productName={sellers.productName}
+                 productPrice={sellers.productPrice}
+                 />
+            ))}
          </div> 
         </div>
        
