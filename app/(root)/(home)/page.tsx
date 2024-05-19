@@ -3,12 +3,28 @@ import React from "react";
 import "./home.css";
 import Image from 'next/image'
 import Card from "@/components/Card/Card";
-import { useEffect } from "react";
+import Banner from "@/components/Banner/Banner";
+import { useEffect,useState } from "react";
 import { animateHome } from "@/app/utils/animation";
 import { bestSellers } from "@/constants/bestSellers";
 
-
 const Home = () => {
+
+  const [dateParts, setDateParts] = useState<{ day: string; month: string; year: string }>({
+    day: '00', 
+    month: '00',
+    year: '00', 
+  });
+
+   useEffect(() => {
+    const today = new Date();
+    const day = today.getDate().toString().padStart(2, '0'); 
+    const month = (today.getMonth() + 1).toString().padStart(2, '0'); 
+    const year = today.getFullYear().toString().slice(-2);
+
+    setDateParts({ day, month, year });
+  }, []); 
+
   useEffect(() => {
     animateHome();
   }, []);
@@ -106,7 +122,7 @@ const Home = () => {
           <h2>Bestsellers</h2>
           <div className="best_sellers_products">
             {bestSellers.map(sellers=>(
-                 <Card  key={sellers.id} // Ensure each card has a unique key
+                 <Card  key={sellers.id}
                  productImage={sellers.productImage}
                  productName={sellers.productName}
                  productPrice={sellers.productPrice}
@@ -114,7 +130,16 @@ const Home = () => {
             ))}
          </div> 
         </div>
-       
+        <div className="on_sale">
+            <div className="banner_container">
+              <Banner/>
+            </div>
+            <div className="date">
+              <h3>{dateParts.day}/</h3>
+              <h3>{dateParts.month}/</h3>
+              <h3>{dateParts.year}</h3>
+            </div>
+        </div>
       </div>
     </div>
   );

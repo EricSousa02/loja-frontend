@@ -1,0 +1,18 @@
+.banner{
+    background: url("https://i.pinimg.com/736x/46/fb/a8/46fba806fb763a9162591b838c13285e.jpg")center/cover;
+    height: 450px;
+    width: 450px;
+}
+
+@media (max-width:768px) {
+    .banner{
+        height: 19rem;
+        width: 19rem;
+    }
+}
+@media (max-width:425px) {
+    .banner{
+        height: 16rem;
+        width: 13rem;
+    }
+}

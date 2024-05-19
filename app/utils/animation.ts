@@ -41,15 +41,7 @@ export const animateHome = () => {
       scrub: 1,
     },
   });
-  gsap.to(".casual_content", {
-    y: 50,
-    scrollTrigger: {
-      trigger: ".casual_content",
-      start: "-80% center",
-      end: "-40% center",
-      scrub: 1,
-    },
-  });
+
   gsap.to(".vixen_image", {
     y: 50,
     scrollTrigger: {
@@ -95,6 +87,37 @@ export const animateHome = () => {
         start: "-40% center",
         end: "-20% center",
         scrub: 1,
+    }
+  })
+  gsap.to(".date h3",{
+    y:150,
+    duration:5,
+    ease:"circ.in",
+    stagger:1,
+    opacity:1,
+    scrollTrigger:{
+      trigger:".on_sale",
+      start:"-290px center",
+      end:"-290px 100px",
+      scrub:true,
+    }
+  })
+  gsap.to(".banner_container",{
+    y:50,
+    scrollTrigger:{
+      trigger:".on_sale",
+      start:"-290px center",
+      end:"-290px 100px",
+      scrub:1,
+    }
+  })
+  gsap.to(".banner",{
+    y:30,
+    scrollTrigger:{
+      trigger:".on_sale",
+      start:"-290px center",
+      end:"-290px 100px",
+      scrub:1,
     }
   })
 };
