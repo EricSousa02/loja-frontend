@@ -355,7 +355,6 @@
 .products_container .on_sale{
     @apply bg-main-1  h-screen flex justify-center items-center;
     position: relative;
-    overflow: hidden;
 }
 .products_container .on_sale .banner_container{
     @apply bg-main-2  h-full flex justify-center items-center;
@@ -367,7 +366,7 @@
     position: absolute;
     top: 30%;
     left: 10%;
-    transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%);
 }
 .products_container .on_sale .date h3{
     @apply text-main-2;
@@ -380,6 +379,19 @@
 }
 .products_container .on_sale .date h3:nth-child(3){
     transform: translateX(150px)
+}
+.products_container .on_sale .on_sale_text{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    text-align: end;
+}
+.products_container .on_sale .on_sale_text h1{
+    @apply text-main-2;
+    font-size: 8vw;
+    font-weight: 100;
+    opacity: 0;
 }
 
 @media (max-width:960px) {

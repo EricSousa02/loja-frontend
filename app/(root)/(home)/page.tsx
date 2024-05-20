@@ -139,6 +139,11 @@ const Home = () => {
               <h3>{dateParts.month}/</h3>
               <h3>{dateParts.year}</h3>
             </div>
+            <div className="on_sale_text">
+              <h1>Promotion</h1>
+              <h1>Of the</h1>
+              <h1>Day</h1>
+            </div>
         </div>
       </div>
     </div>

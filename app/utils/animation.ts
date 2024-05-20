@@ -120,4 +120,24 @@ export const animateHome = () => {
       scrub:1,
     }
   })
+  gsap.to(".on_sale_text",{
+    y:20,
+    scrollTrigger:{
+      trigger:".on_sale",
+      start:"-300px center",
+      end:"-300px 100px",
+      scrub:1,
+    }
+  })
+  gsap.to(".on_sale_text h1",{
+   opacity:1,
+   stagger:1,
+   duration:3,
+    scrollTrigger:{
+      trigger:".on_sale",
+      start:"-350px center",
+      end:"-350px 100px",
+      scrub:1,
+    }
+  })
 };
