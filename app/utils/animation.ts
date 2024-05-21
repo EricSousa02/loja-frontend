@@ -103,7 +103,7 @@ export const animateHome = () => {
     }
   })
   gsap.to(".banner_container",{
-    y:50,
+    y:60,
     scrollTrigger:{
       trigger:".on_sale",
       start:"-290px center",
@@ -112,7 +112,7 @@ export const animateHome = () => {
     }
   })
   gsap.to(".banner",{
-    y:30,
+    y:20,
     scrollTrigger:{
       trigger:".on_sale",
       start:"-290px center",
@@ -124,8 +124,8 @@ export const animateHome = () => {
     y:20,
     scrollTrigger:{
       trigger:".on_sale",
-      start:"-300px center",
-      end:"-300px 100px",
+      start:"-350px center",
+      end:"-350px 100px",
       scrub:1,
     }
   })
