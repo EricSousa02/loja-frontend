@@ -393,7 +393,49 @@
     font-weight: 100;
     opacity: 0;
 }
-
+.products_container .options{
+    @apply h-[150vh] bg-main-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1.5fr 1.5fr 1fr 1fr 1.5fr;
+    place-content: center;
+    gap: 10px;
+    padding: 1rem 0;
+}
+.products_container .options .option{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: .5s;
+}
+.products_container .options .option:hover{
+    filter: grayscale(0%);
+}
+.products_container .options .option:nth-child(1){
+    grid-area: 1/2/4/4;
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/39e309158173519.6386ae5bb7d20.jpg") center/cover;
+}
+.products_container .options .option:nth-child(2){
+    grid-area: 3/4/4/4;
+    background: indigo;
+}
+.products_container .options .option:nth-child(3){
+    grid-area:  4/3/5/4;
+    background: seagreen;
+}
+.products_container .options .option:nth-child(4){
+    grid-area:  4/4/7/6;
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d2182091310255.5e2eef9caafa0.jpg")center/cover;
+}
+.products_container .options .option:nth-child(5){
+    grid-area:  7/2/9/3;
+    background: rgb(42, 1, 92);
+}
+.products_container .options .option:nth-child(6){
+    grid-area:  7/3/9/4;
+    background: rgb(97, 59, 3);
+}
 @media (max-width:960px) {
     .style_container .style_slider section .formal_title {
         gap: 3rem;

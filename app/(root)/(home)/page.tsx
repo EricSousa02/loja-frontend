@@ -145,6 +145,14 @@ const Home = () => {
               <h1>Day</h1>
             </div>
         </div>
+        <div className="options">
+          <div className="option"></div>
+          <div className="option"></div>
+          <div className="option"></div>
+          <div className="option"></div>
+          <div className="option"></div>
+          <div className="option"></div>
+        </div>
       </div>
     </div>
   );
