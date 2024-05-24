@@ -400,17 +400,28 @@
     grid-template-rows: 1fr 1fr 1.5fr 1.5fr 1fr 1fr 1.5fr;
     place-content: center;
     gap: 10px;
-    padding: 1rem 0;
+    padding: 3rem 0;
 }
 .products_container .options .option{
     height: 100%;
     width: 100%;
     filter: grayscale(100%);
-    cursor: pointer;
     transition: .5s;
+}
+.products_container .options .option .option_content{
+    height: 100%;
+    padding: 1.2rem 0 0 0 ;
+    cursor: default;
+}
+.products_container .options .option .option_content p{
+    @apply text-main-2;
+    font-size: 14px;
 }
 .products_container .options .option:hover{
     filter: grayscale(0%);
+}
+.products_container .options .option:nth-child(1),.products_container .options .option:nth-child(4){
+    cursor: pointer;
 }
 .products_container .options .option:nth-child(1){
     grid-area: 1/2/4/4;
@@ -418,11 +429,11 @@
 }
 .products_container .options .option:nth-child(2){
     grid-area: 3/4/4/4;
-    background: indigo;
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/8c1685191514919.65ce2f33352ad.jpg")center/cover;
 }
 .products_container .options .option:nth-child(3){
     grid-area:  4/3/5/4;
-    background: seagreen;
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/57e170187924485.6593e107cdbcc.jpg") center/cover;
 }
 .products_container .options .option:nth-child(4){
     grid-area:  4/4/7/6;
@@ -430,11 +441,20 @@
 }
 .products_container .options .option:nth-child(5){
     grid-area:  7/2/9/3;
-    background: rgb(42, 1, 92);
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/cececf71586475.5bca1d34cbb16.jpg") center/cover;
 }
 .products_container .options .option:nth-child(6){
     grid-area:  7/3/9/4;
-    background: rgb(97, 59, 3);
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/85b61765231119.5aecc28586117.jpg") center/cover;
+}
+.products_container .options .option:nth-child(7){
+    border-top: 1px solid #ffffff;
+    grid-area: 1/4/2/5;
+}
+.products_container .options .option:nth-child(8){
+    border-top: 1px solid #ffffff;
+    grid-area: 5/3/6/4;
+    text-align: end;
 }
 @media (max-width:960px) {
     .style_container .style_slider section .formal_title {

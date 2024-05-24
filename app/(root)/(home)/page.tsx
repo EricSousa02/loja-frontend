@@ -152,6 +152,16 @@ const Home = () => {
           <div className="option"></div>
           <div className="option"></div>
           <div className="option"></div>
+          <div className="option">
+            <div className="option_content">
+             <p>Woman's Outfit</p>
+            </div>
+          </div>
+          <div className="option">
+            <div className="option_content">
+             <p>Man's Outfit</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
