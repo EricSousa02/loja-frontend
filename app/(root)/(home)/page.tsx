@@ -4,6 +4,7 @@ import "./home.css";
 import Image from 'next/image'
 import Card from "@/components/Card/Card";
 import Banner from "@/components/Banner/Banner";
+import Footer from "@/components/Footer/Footer";
 import { useEffect,useState } from "react";
 import { animateHome } from "@/app/utils/animation";
 import { bestSellers } from "@/constants/bestSellers";
@@ -163,6 +164,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     </div>
   );

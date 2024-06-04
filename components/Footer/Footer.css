@@ -1,0 +1,23 @@
+footer{
+    @apply bg-main-2 p-4;
+}
+footer .footer_informations ul{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+footer .footer_informations ul li{
+    font-size: 14px;
+    color: #171717cd;
+    padding: 10px 0;
+}
+footer .footer_informations ul li span{
+    @apply text-main-1 font-bold;
+}
+footer .copy{
+    border-top: 1px solid #181818;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
