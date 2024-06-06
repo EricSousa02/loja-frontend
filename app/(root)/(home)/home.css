@@ -353,7 +353,7 @@
     flex-wrap: wrap;
 }
 .products_container .on_sale{
-    @apply bg-main-1  h-screen flex justify-center items-center;
+    @apply bg-main-1  h-[130vh] flex justify-center items-center;
     position: relative;
 }
 .products_container .on_sale .banner_container{
