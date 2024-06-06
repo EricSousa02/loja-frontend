@@ -425,27 +425,27 @@
 }
 .products_container .options .option:nth-child(1){
     grid-area: 1/2/4/4;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/39e309158173519.6386ae5bb7d20.jpg") center/cover;
+    background: url("/assets/optionImages/female.jpg") center/cover;
 }
 .products_container .options .option:nth-child(2){
     grid-area: 3/4/4/4;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/8c1685191514919.65ce2f33352ad.jpg")center/cover;
+    background: url("/assets/optionImages/mountain.jpg")center/cover;
 }
 .products_container .options .option:nth-child(3){
     grid-area:  4/3/5/4;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/57e170187924485.6593e107cdbcc.jpg") center/cover;
+    background: url("/assets/optionImages/flowers.jpg") center/cover;
 }
 .products_container .options .option:nth-child(4){
     grid-area:  4/4/7/6;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d2182091310255.5e2eef9caafa0.jpg")center/cover;
+    background: url("/assets/optionImages/man.jpg")center/cover;
 }
 .products_container .options .option:nth-child(5){
     grid-area:  7/2/9/3;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/cececf71586475.5bca1d34cbb16.jpg") center/cover;
+    background: url("/assets/optionImages/car.jpg") center/cover;
 }
 .products_container .options .option:nth-child(6){
     grid-area:  7/3/9/4;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/85b61765231119.5aecc28586117.jpg") center/cover;
+    background: url("/assets/optionImages/snow.jpg") center/cover;
 }
 .products_container .options .option:nth-child(7){
     border-top: 1px solid #ffffff;
